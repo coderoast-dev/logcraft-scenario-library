@@ -3,7 +3,6 @@
 # Concepts: weighted_choice, choice, range, sequence, static, normal
 scenario:
   name: custom-fields
-  seed: 42
   duration: 2m
 
   outputs:

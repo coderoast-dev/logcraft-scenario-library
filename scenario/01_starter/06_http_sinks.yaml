@@ -3,7 +3,6 @@
 # Concepts: http sink, multiple outputs, format per sink, backlog, error tracking
 scenario:
   name: http-sinks
-  seed: 42
   duration: 2m
 
   outputs:

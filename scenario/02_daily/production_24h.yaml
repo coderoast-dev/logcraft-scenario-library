@@ -3,7 +3,6 @@
 # Run with: LogCraft data/scenario/daily/production_24h.yaml
 scenario:
   name: production-24h
-  seed: 20260330
   duration: 24h
 
   environment:

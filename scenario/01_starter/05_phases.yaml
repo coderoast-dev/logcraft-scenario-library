@@ -3,7 +3,6 @@
 # Concepts: phases, rate changes, latency distributions (uniform, normal, percentile)
 scenario:
   name: phases-demo
-  seed: 42
   duration: 5m
 
   outputs:

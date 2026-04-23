@@ -3,7 +3,6 @@
 # Concepts: multiple outputs, format per sink, independent write telemetry
 scenario:
   name: multiple-outputs
-  seed: 42
   duration: 2m
 
   outputs:

@@ -3,7 +3,6 @@
 # Concepts: multiple agents, error_rate, interactions, range generator
 scenario:
   name: two-agents
-  seed: 42
   duration: 2m
 
   outputs:

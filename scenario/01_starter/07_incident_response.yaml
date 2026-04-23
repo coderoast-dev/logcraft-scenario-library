@@ -3,7 +3,6 @@
 # Concepts: incidents, effects, interactions, rules, templates
 scenario:
   name: incident-response
-  seed: 42
   duration: 5m
 
   templates:

@@ -3,7 +3,6 @@
 # Concepts: agent, rate, fields, weighted_choice, choice
 scenario:
   name: hello-logcraft
-  seed: 42
   duration: 2m
 
   outputs:
