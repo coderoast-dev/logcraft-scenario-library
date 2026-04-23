@@ -75,13 +75,9 @@ scenario:
       - version
 
   outputs:
-    - type: console
+    - type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: json
-    - type: file
-      format: json
-      path: logs/ecommerce_reallife.log
-      max_size_bytes: 5242880
-      max_files: 3
 
   incidents:
     - name: database_slowdown

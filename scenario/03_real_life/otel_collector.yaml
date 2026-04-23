@@ -26,16 +26,15 @@ scenario:
         p95: 15
         p99: 50
 
-  # ── Outputs: OTEL format for collector, console for debugging ────────
+  # ── Outputs: OTEL format for collector, secondary for debugging ────────
   outputs:
     - name: otel_collector
-      type: file
+      type: http
+      url: http://otel-collector.logcraft.demo/v1/logs
       format: otel
-      path: logs/otel-collector.ndjson
-      max_size_bytes: 52428800
-      max_files: 5
     - name: debug
-      type: console
+      type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: json
 
   incidents:

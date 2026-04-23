@@ -48,29 +48,24 @@ scenario:
         p95: 50
         p99: 200
 
-  # ── Outputs: file logs + metrics ──────────────────────────────────────
+  # ── Outputs: HTTP log aggregators ─────────────────────────────────────
   outputs:
     - name: app_logs
-      type: file
+      type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: json
-      path: logs/daily/app.log
-      max_size_bytes: 104857600
-      max_files: 10
     - name: access_logs
-      type: file
+      type: http
+      url: http://ingest.logcraft.demo/v1/access
       format: clf
-      path: logs/daily/access.log
-      max_size_bytes: 104857600
-      max_files: 10
     - name: metrics
-      type: statsd
-      host: 127.0.0.1
-      port: 8125
-      metrics_prefix: logcraft.daily
-      metrics_interval_seconds: 30
+      type: http
+      url: http://metrics.logcraft.demo/v1/events
+      format: json
     - name: recording
-      type: recording
-      path: recordings/daily.jsonl
+      type: http
+      url: http://archive.logcraft.demo/v1/logs
+      format: json
 
   # ── Incidents: realistic daily incidents ──────────────────────────────
   incidents:

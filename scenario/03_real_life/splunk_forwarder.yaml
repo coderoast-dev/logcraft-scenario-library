@@ -28,19 +28,16 @@ scenario:
   # ── Outputs: syslog for Splunk TCP input, JSON for HEC ───────────────
   outputs:
     - name: splunk_syslog
-      type: file
+      type: http
+      url: http://splunk.logcraft.demo/v1/logs
       format: rfc5424
-      path: logs/splunk-syslog.log
-      max_size_bytes: 104857600
-      max_files: 10
     - name: splunk_hec
-      type: file
+      type: http
+      url: http://splunk.logcraft.demo/services/collector/event
       format: json
-      path: logs/splunk-hec.ndjson
-      max_size_bytes: 52428800
-      max_files: 5
     - name: monitoring
-      type: console
+      type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: text
 
   incidents:

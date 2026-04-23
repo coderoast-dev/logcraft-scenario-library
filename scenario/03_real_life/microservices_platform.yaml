@@ -136,7 +136,8 @@ scenario:
         latency_multiplier: 2.0
 
   outputs:
-    - type: console
+    - type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: json
 
   # ── Agents ─────────────────────────────────────────────────────────────

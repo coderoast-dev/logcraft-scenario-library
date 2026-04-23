@@ -27,19 +27,16 @@ scenario:
 
   outputs:
     - name: siem
-      type: file
+      type: http
+      url: http://siem.logcraft.demo/api/bulk
       format: json
-      path: logs/incident-training/siem.ndjson
-      max_size_bytes: 209715200
-      max_files: 5
     - name: metrics
-      type: statsd
-      host: 127.0.0.1
-      port: 8125
-      metrics_prefix: logcraft.incident
-      metrics_interval_seconds: 15
+      type: http
+      url: http://metrics.logcraft.demo/v1/events
+      format: json
     - name: console
-      type: console
+      type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: text
 
   # ── 6 incidents throughout the day ────────────────────────────────────

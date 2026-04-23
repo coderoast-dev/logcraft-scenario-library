@@ -28,13 +28,12 @@ scenario:
   # ── Outputs: dual ECS for Elastic + JSON console ──────────────────────
   outputs:
     - name: elastic_ingest
-      type: file
+      type: http
+      url: http://elastic.logcraft.demo/_bulk
       format: ecs
-      path: logs/elastic-ingest.ndjson
-      max_size_bytes: 52428800
-      max_files: 5
     - name: console
-      type: console
+      type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: json
 
   incidents:

@@ -31,23 +31,19 @@ scenario:
   # and receives StatsD metrics on port 8125.
   outputs:
     - name: dd_logs
-      type: file
+      type: http
+      url: http://intake.logcraft.demo/v1/logs
       format: kv
-      path: /var/log/app/application.log
-      max_size_bytes: 52428800
-      max_files: 5
     - name: dd_metrics
       type: statsd
       host: 127.0.0.1
       port: 8125
-      metrics_prefix: logcraft.prod
+      metrics_prefix: logcraft.datadog
       metrics_interval_seconds: 10
     - name: dd_json
-      type: file
+      type: http
+      url: http://intake.logcraft.demo/v1/logs/structured
       format: json
-      path: /var/log/app/structured.json
-      max_size_bytes: 52428800
-      max_files: 3
 
   personas:
     - name: api_consumer

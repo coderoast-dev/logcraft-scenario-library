@@ -137,5 +137,6 @@ scenario:
           integer: true
 
   outputs:
-    - type: console
+    - type: http
+      url: http://ingest.logcraft.demo/v1/logs
       format: json
