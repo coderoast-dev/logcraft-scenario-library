@@ -5,12 +5,6 @@ scenario:
   name: two-agents
   duration: 2m
 
-  outputs:
-    - name: log-aggregator
-      type: http
-      url: http://ingest.logcraft.demo/v1/logs
-      format: json
-
   agents:
     - name: web-server
       type: web_server

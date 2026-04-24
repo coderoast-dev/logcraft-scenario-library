@@ -57,12 +57,6 @@ scenario:
         to: api-gateway
         error_rate: 0.08
 
-  outputs:
-    - name: log-aggregator
-      type: http
-      url: http://ingest.logcraft.demo/v1/logs
-      format: json
-
   agents:
     - name: api-gateway
       type: web_server
