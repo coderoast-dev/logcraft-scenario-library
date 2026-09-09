@@ -112,9 +112,9 @@ a reverse-DNS hostname of the shape `dsl-Chn-static-<zero-padded IPv4>.touchteli
 the IP field on the same line was masked to `<*>`. `public-ipv4` does not fire on it: the quad is
 embedded in a name, so the predicate's trailing boundary declines the candidate before any
 address test runs. **Whether this class claims an address spelled inside a hostname is a claim
-boundary and not a defect**, so it is disclosed here and left open rather than decided by a lint
-change. It is named because a record that corrected only ① would be a half-truth in the
-flattering direction.
+boundary and not a defect**, so it is disclosed here and was left open rather than decided by a
+lint change. **It has since been RULED — see the amendment of 2026-09-09 below.** It is named
+because a record that corrected only ① would be a half-truth in the flattering direction.
 
 **AND THIS RECORD IS SCANNED AS PART OF ITS OWN ARTIFACT — learned by tripping it, twice.** A
 first draft of this amendment quoted three of the source tree's real addresses as examples and
@@ -130,3 +130,35 @@ a zero-padded octet outright, so a padded quad **standing alone** would have bee
 parser rather than by a judgement. The predicate now judges such a token on its decimal reading,
 with controls in both directions. **No count above moved** — the padded occurrences here are the
 hostname ones, which that arm does not reach.
+
+## Amendment — 2026-09-09: the hostname boundary is RULED, and the answer is *no*
+
+The 2026-09-05 amendment above named an open question in item ② and deliberately did not decide it:
+whether the `public-ipv4` class claims an address that is spelled inside a **hostname**. It is now
+decided, and this record says so rather than leaving a reader to infer it from an unchanged count.
+
+**Ruling:** Founder, Emmanuel Prunet, 2026-09-09 — **`public-ipv4` does NOT claim an address spelled
+inside a hostname.** The predicate is not widened.
+
+**The ground.** Widening it would extend the claim from *a routable address stands alone in this
+line* to *any name of that shape contains one*, across every reverse-DNS name in every corpus we
+measure — at a false-positive rate nobody has measured, on a class that appears in three signed
+disclosures. This product's claim is precision-first, and a detector that fires on a shape it cannot
+tell from its own false positives is the failure this very record already documents once, in item ①.
+A narrow claim that is true is worth more than a wide claim that is approximately true.
+
+**What changes: nothing measurable.** The predicate is unchanged, the accepted class set above is
+unchanged, and every count above still reproduces exactly. **What changes is that a question this
+record described as open is now closed**, and a record read as current must be current.
+
+**What is accepted rather than repaired.** The reverse-DNS name described in item ② stays in this
+render, on the same number of lines, spelling the same address it spelled on 2026-09-05. It is not
+masked, not removed, and not claimed by the class. **It is disclosed — here, in the record that
+travels with the bytes.** That is the whole trade this file exists to make legible: the boundary is
+drawn narrowly enough to be true, and what falls outside it is named rather than hidden. A reader who
+needs a wider guarantee than *the declared classes, one line at a time* should read § *The boundary*
+above, which has said since 2026-08-21 that this gate is a floor and not a complete inventory.
+
+**This amendment names no instance of any declared class**, for the reason the 2026-09-05 amendment
+learned by tripping its own gate twice: a disclosure may describe a class but must never spell an
+instance of it, including an instance of that class's own false positive.
