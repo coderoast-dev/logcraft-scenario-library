@@ -1,10 +1,10 @@
-# 35 ordinal_drift_w1 — the W1 ordinal-drift gate (§4A.4 SRC-D-W1-1/SRC-D-W1-2/SRC-D-W1-3/SRC-D-W1-4/SRC-D-W1-5/SRC-D-W1-6), on a DECLARED intervention.
+# 35 ordinal_drift_w1 — the W1 ordinal-drift gate (the W1 ordinal channel: `F-SRC-insight-metalog:metalog.api.cppm:ordinal_w1`, `F-SRC-insight-canon:canon.api.cppm:OrdinalSchedule`, the θ_k thresholds `F-SRC-insight-eidos:classify.cpp:kOrdinalLowSignificance`), on a DECLARED intervention.
 #
 # THE CUT GATE for the W1 ordinal channel. One declared-ordinal field (`latency_ms`) over one
 # generated stream, and two counterfactuals of it: a ~10-octave shift must read OrdinalDrift /
 # regression / HIGH (and its mirror, recovery / HIGH), while a sub-octave jitter must read neither
-# HIGH nor MED. `latency_ms` routes to W1, never the categorical FieldShift channel (SRC-D-W1-5 router
-# exclusivity).
+# HIGH nor MED. `latency_ms` routes to W1, never the categorical FieldShift channel (router
+# exclusivity, `F-SRC-insight-metalog:metalog.api.cppm:OrdinalHistogram`).
 #
 # GENERATABLE ONLY SINCE LF4 SHIPPED (emission contract §4). The earlier attempt at this migration
 # is what produced LF4: `format: json` nested custom fields under a `"fields"` object and
@@ -96,7 +96,7 @@ contract_scenario:
           must_fire:
             - { kind: OrdinalDrift, polarity: regression, shift: HIGH, template: "db query completed" }
           must_not_emit:
-            - { kind: FieldShift, template: "db query completed" }   # SRC-D-W1-5 router exclusivity
+            - { kind: FieldShift, template: "db query completed" }   # router exclusivity: F-SRC-insight-metalog:metalog.api.cppm:OrdinalHistogram
           attributable_to: ["latency_ms"]
         untouched_projection:
           exclude_rows:
