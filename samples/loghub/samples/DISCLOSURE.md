@@ -11,7 +11,7 @@ bounded, and the boundary is checked mechanically on every publication run.
 
 **Ground:** the LogHub slice stays published — ruled 2026-08-18 and signed 2026-08-21; our copy is byte-identical to a record its authors deliberately made public, so it adds nothing to an exposure they chose.
 
-**Discharges:** DN-39.D3 field 1 — the signature on this tree's disclosure, which only a human can give and which this gate can never mint for itself.
+**Discharges:** ADR-7.D9's first disclosure field, the ruling — the signature on this tree's disclosure, which only a human can give and which this gate can never mint for itself.
 
 ## The upstream publication of record
 
