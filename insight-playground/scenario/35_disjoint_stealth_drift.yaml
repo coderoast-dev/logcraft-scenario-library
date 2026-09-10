@@ -108,7 +108,7 @@ contract_scenario:
           # dependence rule's own logic (ADR-32.D2 case 6). So a fold forms here BY DESIGN —
           # asserted sub-floor below — and the guard this position keeps is the product claim
           # the old unqualified guard was protecting: the stealth drift never PAGES on
-          # corroboration this weak (the DN-47.D15 disposition: buffered, never
+          # corroboration this weak (the ADR-27.D5 disposition: buffered, never
           # operator-visible).
           - envelope . Cmp(band=surfacing) . fired_set
           # The CONTIGUOUS comparators: the stealth floor. The RAW horizons are the DERIVED
@@ -152,7 +152,7 @@ contract_scenario:
           - RAW.acute . Fld.dist . field_jsd
           # h9 and h12 are RE-EXPRESSED here, not deleted: this fixture's derived grid is `{6}`,
           # so the whole RAW-horizon family it can observe is this one coordinate, and the claim
-          # "the contiguous comparators stay silent" survives on it (DN-47.D6 — a vacated
+          # "the contiguous comparators stay silent" survives on it (ADR-27.D4 — a vacated
           # must_not_fire is the can't-FAIL shape one tier down).
           - RAW.h6 . Fld.dist . field_jsd
           - ANCHORED.w3 . Fld.dist . field_jsd

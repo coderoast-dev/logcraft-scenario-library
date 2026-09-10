@@ -75,7 +75,7 @@ contract_scenario:
           - DISJOINT.L2.s3 . Fld.dist . field_jsd
           # Since ADR-32.D6 the declared comparisons carry their identity carriers, and the
           # epoch-disjoint cross pairs (ADR-32.D2 case 6) corroborate this REAL drift into a
-          # sub-floor branch-C fold — buffered, never operator-visible (DN-47.D15 disposition).
+          # sub-floor branch-C fold — buffered, never operator-visible (ADR-27.D5 disposition).
           - envelope . Cmp(branch=C, band=sub_floor) . fired_set
         must_not_fire:
           # The product claim the old unqualified fold-guard was protecting: corroboration this

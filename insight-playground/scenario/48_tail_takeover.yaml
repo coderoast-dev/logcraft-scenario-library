@@ -124,7 +124,7 @@ deterministic_scenario:
 contract_scenario:
   reference_scenario: tail-takeover
 
-  # No `disjoint:` — so the derived RAW grid is exactly {6}, the tail's own demand (DN-47.D17), and
+  # No `disjoint:` — so the derived RAW grid is exactly {6}, the tail's own demand (ADR-25.D7), and
   # `RAW.h6` is the shipped horizon itself. top_k_size 8 seats the ledger family in top_k and puts
   # everything else in the tail; the shipped 64 would swallow all 29 templates and leave NO tail at
   # all, which is the documented starvation shape (tail_summary absent ⇒ no tail_delta ⇒ the

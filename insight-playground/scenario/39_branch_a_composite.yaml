@@ -152,7 +152,7 @@ contract_scenario:
     # NO BRANCHING — the drift alone earns no branch-A Composite: without the branching witness
     # no structural item enters the closed set, so identity stays unconfirmed. Since ADR-32.D6
     # the declared carriers DO corroborate the drift's existence epoch-disjointly (ADR-32.D2
-    # case 6), so a sub-floor branch-C fold forms — buffered, never a page (DN-47.D15
+    # case 6), so a sub-floor branch-C fold forms — buffered, never a page (ADR-27.D5
     # disposition) — and the two guards below carry the two claims separately: never branch A
     # without the structural witness, never a page on corroboration this weak.
     - name: no-branch-shift

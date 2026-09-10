@@ -103,7 +103,7 @@ contract_scenario:
 
     # NO SPIKE — the drift still speaks, and since ADR-32.D6 its declared carriers corroborate
     # it epoch-disjointly (ADR-32.D2 case 6) even without the spike: a sub-floor branch-C fold
-    # forms — buffered, never a page (the DN-47.D15 disposition). The `Fld.dist` must_fire is
+    # forms — buffered, never a page (the ADR-27.D5 disposition). The `Fld.dist` must_fire is
     # still the §3.4 witness that the sub-floor band is about the missing spike, not a dead
     # stream.
     - name: no-spike

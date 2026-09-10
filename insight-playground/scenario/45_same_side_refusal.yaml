@@ -6,7 +6,7 @@
 # pair (h13 x L2.s3 above all — 13 < 19 clears the s3 far block at every phase), so
 # "Cube B admits 0 itemsets from same-side-dependent witness sets" was VACUOUSLY green — the
 # exact can't-FAIL shape the arm's exit criterion must be checked against
-# (MEM:synthetic-gate-vacuity-vs-judgment; DN-47.D6's minted rule). This fixture closes that
+# (MEM:synthetic-gate-vacuity-vs-judgment; the rule the density census behind ADR-25.D7 minted). This fixture closes that
 # hole by declaring L2.s2 ALONE: its far block spans lookbacks [13+q..18+q], and the ONE deep
 # stride this creep class wakes — h13 (measured: the only stride Fld.dist that fires on the
 # slow walk; h8 stays silent) — reads that SAME epoch, same side (13 ∈ [13..23]). Under the
@@ -22,7 +22,7 @@
 #
 # ── PRE-REGISTERED SCAFFOLD EXPECTATION (the negative arm's refusal branch) ───────────────────
 # Under the dense build scaffold ({1,2,3,5,8,13} appended to BOTH raw_strides and
-# max_raw_stride): the shipped gate folds h13's creep echo with s2 (the DN-47.D6 manufacture
+# max_raw_stride): the shipped gate folds h13's creep echo with s2 (the ADR-25.D7 manufacture
 # channel), and the D8 relation holds NO admissible pair — CB-REFUSED rows, not CB-ADJUDICATE.
 # A dense-arm run where this fixture's folds are ADMITTED is a red of the dependence matrix
 # itself. The mutation arm (matrix off) must re-admit exactly these folds.
